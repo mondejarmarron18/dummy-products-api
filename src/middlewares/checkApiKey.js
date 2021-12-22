@@ -5,13 +5,13 @@ const toEncrypt = require('../utilities/toEncrypt');
 const checkApiKey = toHandleAsync(async (req, res, next) => {
     const { apikey } = req.query;
 
-    if (!apikey) throw new res.withError('Please provide a valid API key', 400)
+//     if (!apikey) throw new res.withError('Please provide a valid API key', 400)
 
-    const encryptedKeyQuery = toEncrypt(apikey);
+//     const encryptedKeyQuery = toEncrypt(apikey);
 
-    const foundKey = await ApiKey.findOne({ key: encryptedKeyQuery })
+//     const foundKey = await ApiKey.findOne({ key: encryptedKeyQuery })
 
-    if (!foundKey) throw new res.withError('Please provide a valid API key', 400)
+//     if (!foundKey) throw new res.withError('Please provide a valid API key', 400)
 
     next()
 })
